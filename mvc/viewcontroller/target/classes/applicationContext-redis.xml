@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:cache="http://www.springframework.org/schema/cache"  
+       xmlns:c="http://www.springframework.org/schema/c" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:util="http://www.springframework.org/schema/util" 
+       xsi:schemaLocation="  
+           http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache.xsd   
+           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"> 
+    
+    
+    <!-- redis缓存配置 -->
+    <context:property-placeholder location="classpath*:redis.properties" ignore-unresolvable="true"/>
+  	<!-- 开启缓存注解  这个地方，如果你程序中已经采用了一层代理，比如事务，则此处只能是false-->
+  	<cache:annotation-driven cache-manager="cacheManager" proxy-target-class="false"/>
+  	
+  	<!-- jedis对象池配置 -->
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig" 
+    	  p:maxTotal="${redis.maxTotal}" p:maxIdle="${redis.maxIdle}" p:maxWaitMillis="${redis.maxWaitMillis}" 
+    	  p:blockWhenExhausted="${redis.blockWhenExhausted}" />  
+    
+    <!-- jedis客户端连接工厂 -->
+    <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory"  
+          p:host-name="${redis.host}" p:port="${redis.port}" p:password="${redis.pass}" p:pool-config-ref="poolConfig" />  
+    
+    <!-- 模板类 -->
+    <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate" 
+    	  p:connection-factory-ref="connectionFactory" >
+    	<!-- 为了查看方便,用json序列化 -->
+    	<!-- <property name="keySerializer"  value="org.springframework.data.redis.serializer.StringRedisSerializer" />
+        <property name="valueSerializer" value="org.springframework.data.redis.serializer.JacksonJsonRedisSerializer" />
+    	<property name="keySerializer"><bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer" /></property>
+    	<property name="valueSerializer"><bean class="org.springframework.data.redis.serializer.JacksonJsonRedisSerializer" /></property>-->
+    </bean>
+    
+    <!-- redis缓存管理器 -->
+    <bean id="cacheManager" class="org.springframework.data.redis.cache.RedisCacheManager" 
+    	  c:redisOperations-ref="redisTemplate" p:usePrefix="true" p:defaultExpiration="10000" 
+    	  p:expires-ref="cacheExpireMap"/>
+    <util:map id="cacheExpireMap">
+    	<entry key="cacheUser" value="7200"></entry>
+    </util:map>
+</beans>

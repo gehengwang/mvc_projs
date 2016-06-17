@@ -1,0 +1,49 @@
+@charset "utf-8";
+/*菜单*/
+*{font-size:14px; font-family:Tahoma,Verdana,微软雅黑,新宋体}
+body{/* background:#D2E0F2; */ }
+a{ color:Black; text-decoration:none;}
+a:hover{ color:Red; text-decoration:underline;}
+
+.head a{color:White;text-decoration:underline;}
+.footer{text-align:center;color:#15428B; margin:0px; padding:0px;line-height:23px; font-weight:bold;}
+.navlist{list-style-type:none;margin:0px; padding:10px;}
+.navlist li{ padding:0px;}
+.navlist li a{line-height:24px;}
+.navlist li div{margin:2px 0px;padding-left:10px;padding-top:2px; border:1px dashed #ffffff;}
+.navlist li div.hover{border:1px dashed #99BBE8; background:#E0ECFF;cursor:pointer;}
+.navlist li div.hover a{color:#416AA3;}
+.navlist li div.selected{border:1px solid #99BBE8; background:#E0ECFF;cursor:default;}
+.navlist li div.selected a{color:#416AA3; font-weight:bold;}
+
+/*登录页css*/
+.dl{ height:610px; width:950px; position:absolute; top:10px; left:50%; margin-left:-475px;}
+.dlk{ width:938px; margin:auto; height:320px; }
+.dlk_l{ width:541px; float:left;}
+.dlk_r{  width:235px; height:268px; float:right; border:#dcddde solid 1px; padding-top:50px; padding-left:15px; padding-right:45px;}
+.logo{ height:70px; margin-top:50px; margin-bottom:20px; width:980px; margin-left:auto; margin-right:auto; font-weight: }
+.login-form{ position:relative; float:right; width:300px;height:180px;padding:40px 60px;bottom:5%; left:25%; background:rgba(255,255,255,.5);}
+.login-form input{font-family:"Microsoft yahei",Helvetica, Arial, sans-serif;width:300px;height:30px;border:none; background:#ffffff; padding-left:40px;}
+.login-form input[type="text"]{
+  background:url(../images/user-name.png) left center no-repeat #ffffff;
+}
+.login-form input[id="mobile"]{
+  background:url(../images/phone.png) left center no-repeat #ffffff;
+}
+.login-form input[type="password"]{
+  background:url(../images/password.png) left center no-repeat #ffffff;
+}
+.login-btn{
+	width:180px;
+	margin:15px auto;
+	cursor:pointer;
+}
+.login-btn button{
+  font-family:"Microsoft yahei",Helvetica, Arial, sans-serif;
+  width:85px;
+  height:30px;
+  border:none;
+  color:#ffffff;
+  background:#186fd9;
+  cursor:pointer;
+}

@@ -1,0 +1,147 @@
+@CHARSET "UTF-8";
+#TopBanner{
+	width:100%;
+	min-width:980px;
+	height:145px;
+	overflow:hidden;
+	margin:auto;
+	background:url();
+	background-repeat:repeat-x;
+}
+#TopBanner .content{
+	margin:auto;
+	width:145px;
+	height:220px;
+	background:url() 0px 0px no-repeat;
+}
+
+#MidBody{
+	width:980px;
+	height:520px;
+	margin:auto;
+	background-color:#F5F5F5;
+}
+
+#DownCopyRight{
+/*float:left;*/
+overflow:hidden;
+width:980px;
+margin:auto;
+margin-top:10px;
+}
+#DownCopyRight ul{
+float:left;
+overflow:hidden;
+width:980px;
+}
+#DownCopyRight ul li{
+float:left;
+overflow:hidden;
+width:980px;
+text-align:center;
+color:#545454;
+}
+
+#DownCopyRightBj{
+	margin:auto;
+	min-width:980px;
+	width:100%;
+	height:163px;
+	background-position:center;
+	background:url(../images/DownBj.jpg) top center no-repeat;
+}
+
+
+
+
+
+/*************************/
+#FriendLink{
+	margin:auto;
+	width:978px;
+	overflow:hidden;
+	margin-top:10px;
+	border:1px solid #D2D2D2;
+}
+#FriendLink .title{
+	float:left;
+	overflow:hidden;
+	width:980px;
+	height:26px;
+}
+#FriendLink .title .b6T{
+	width:958px;
+	padding-left:20px;
+	height:26px;
+	line-height:26px;
+	font-weight:bold;
+	background-image:url(../images/FriendLinkBj.gif);
+	background-repeat:no-repeat;
+}
+#FriendLink .content{
+	float:left;
+	width:980px;
+	overflow:hidden;
+}
+#FriendLink .content ul{
+	float:left;
+	width:978px;
+	overflow:hidden;
+}
+#FriendLink .content ul li{
+	float:left;
+	overflow:hidden;
+	white-space:nowrap;
+	padding-left:10px;
+	line-height:30px;
+	color:#959595;
+}
+
+
+/*翻页的盒子*/
+#ListFlipTop{
+width:768px;
+line-height:30px;
+}
+ 
+#ListFlipTop span{
+border:1px solid #999999;
+margin-right:10px;
+text-align:center;
+font-size:16px;
+}
+#ListFlipTop span A{
+padding-left:5px;
+padding-right:5px;
+}
+ 
+#ListFlipTop .curPage{
+background-color:#999999;
+color:#FFFFFF;
+padding-left:5px;
+padding-right:5px;
+}
+ 
+ 
+#ListFlipBottom{
+width:768px;
+line-height:30px;
+}
+ 
+#ListFlipBottom span{
+border:1px solid #999999;
+margin-right:10px;
+text-align:center;
+font-size:16px;
+}
+#ListFlipBottom span A{
+padding-left:5px;
+padding-right:5px;
+}
+ 
+#ListFlipBottom .curPage{
+background-color:#999999;
+color:#FFFFFF;
+padding-left:5px;
+padding-right:5px;
+}

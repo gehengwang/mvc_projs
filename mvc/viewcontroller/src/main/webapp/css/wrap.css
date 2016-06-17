@@ -1,0 +1,31 @@
+@charset "utf-8";
+html { color: #333;background: #F6F1EA; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100% }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, 
+th, td, hr, button, article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	margin: 0; padding: 0; -webkit-tap-highlight-color: rgba(0,0,0,0) }
+html, body { min-height: 100%;height: 100%;  position:relative; bottom:0; left:0; right:0; top:0; }
+html, body, button, input, select, textarea { font: 12px/1.5 Microsoft YaHei, arial; color: #333 }
+input, select, textarea { font-size: 100% }
+input:focus, select:focus,textarea { outline: none; }
+
+
+/* 按钮 */
+
+.btn-f{ 
+	cursor:pointer; display:inline-block; background:#217FC7; font-size:15px; 
+	width:20%; text-align:center; border-radius: 3px; height:40px; color:#fff; border:1px solid #217FC7;}
+
+.body{background: #F6F1EA; overflow:hidden; min-height:100%;  position:relative; bottom:0; left:0; right:0; top:0;}
+.main{ padding:40px 5px 60px 5px;}
+
+/* 页头 */
+.header { position: fixed;top:0; left:0; background:#217FC7; height: 40px; color: #FFF; text-align: center; width: 100%; z-index:100; border-bottom:1px solid #217FC7;}
+.header h1{font-weight:300; font-size: 20px; height:40px; line-height: 40px;}
+.header h1 span{ font-size:14px;}
+.header .l-link,
+.header .r-link{ position: absolute; top: 0; height: 40px; line-height: 40px; font-size: 16px;color: #FFF; }
+.header .l-link{ left: 3px; width: 40px; height:40px; background: url() center center no-repeat;background-size:28px 28px;}
+
+/*答题页面*/
+.formbox{ background:#fff; padding:5px; margin-bottom:10px;}
+.formbox .textarea{ border:1px solid #eee; background:#fcfcfc; padding:2px 5px; width:120px;border-radius:3px; font-size:12px; height:40px;}

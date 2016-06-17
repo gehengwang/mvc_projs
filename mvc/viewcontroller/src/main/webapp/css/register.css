@@ -1,0 +1,181 @@
+@CHARSET "UTF-8";
+#TopBanner .content{
+	margin:auto;
+	width:980px;
+	height:143px;
+	background:url(../images/register_top.jpg) 0px 0px no-repeat;
+}
+
+
+.redText{
+	color:#D21B1B;
+	font-weight:bold;
+	border-bottom:1px solid #D21B1B;
+}
+.blueText{
+	color:#009CFF;
+	font-weight:bold;
+	border-bottom:1px solid #009CFF;
+}
+
+#MidBody .topSeparator{
+	width:980px;
+	height:6px;
+	float:left;
+	overflow:hidden;
+	background:url(/images/skin_bj.png) 0px 0px no-repeat;
+}
+#MidBody .bottomSeparator{
+	width:980px;
+	height:4px;
+	float:left;
+	overflow:hidden;
+	background:url(/images/skin_bj.png) 0px -13px no-repeat;
+}
+
+#MidBody .top{
+	width:980px;
+	height:40px;
+	float:left;
+	background-color:#217FC7;
+	overflow:hidden;
+}
+#MidBody .top ul{
+	width:336px;
+	height:35px;
+	margin-top:5px;
+	margin-left:30px;
+}
+#MidBody .top ul li{
+	width:96px;
+	height:35px;
+	float:left;
+	margin-left:10px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:14px;
+	text-align:center;
+	line-height:35px;
+	display:inline;
+	background:url(/images/skin_bj.png) -116px -29px no-repeat;
+}
+#MidBody .top ul li a{
+	color:#FFF;	color:#FFF;
+}
+#MidBody .top .choosed{
+	color:#D21B1B;
+	background:url(/images/skin_bj.png) 0px -29px no-repeat;
+}
+#MidBody .left{
+	width:553px;
+	float:left;
+	overflow:hidden;
+}
+#content1{
+	width:600px;
+	float:left;
+	margin-top:20px;
+	margin-left:30px;
+	display:inline;
+	overflow:hidden;
+}
+#content1 ul {
+	width:680px;
+	float:left;
+	overflow:hidden;
+}
+#content1 ul li{
+	float:left;
+	overflow:hidden;
+}
+#content1 .li1{
+	width:120px;
+	overflow:hidden;
+	height:30px;
+	line-height:30px;
+	color:#009CFF;
+	font-weight:bold;
+	font-size:14px;
+}
+#content1 .li2{
+	width:260px;
+	overflow:hidden;
+	height:30px;
+	line-height:30px;
+}
+#content1 .li3{
+	width:260px;
+	overflow:hidden;
+	height:30px;
+	line-height:30px;
+	color:#F00;
+}
+
+#content1 .li4{
+	width:260px;
+	overflow:hidden;
+	height:30px;
+	line-height:30px;
+	color:#008040;
+}
+
+#content1 .li5{
+	width:15px;
+	overflow:hidden;
+	height:30px;
+	line-height:30px;
+	color:#F00;
+}
+
+#content1 input{
+	width:240px;
+	height:25px;
+	line-height:25px;
+}
+
+#content2{
+	width:480px;
+	height:2px;
+	overflow:hidden;
+	margin-top:20px;
+	margin-left:30px;
+	float:left;
+	background:url(/images/skin_bj.png) -464px -36px no-repeat;
+}
+#content3{
+	width:480px;
+	height:52px;
+	float:left;
+	text-align:center;
+	margin-top:20px;
+}
+#content3 img{
+	width:102px;
+	height:52px;
+	border:none;
+}
+#content4{
+	width:250px;
+	height:30px;
+	line-height:30px;
+	float:left;
+	margin-top:20px;
+	margin-left:150px;
+	display:inline;
+}
+
+#content4 input{
+	width:20px;
+	height:20px;
+	border:none;
+}
+
+#MidBody .right{
+	width:427px;
+	height:390px;
+	float:left;
+	background-image:url(../images/register_bj.jpg);
+	background-position:top;
+	background-repeat:no-repeat;
+}
+

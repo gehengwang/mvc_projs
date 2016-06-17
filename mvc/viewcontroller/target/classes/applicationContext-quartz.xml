@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:schemaLocation="
+		   http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">  
+    
+    <!-- 总调度Scheduler用于启动Spring定时器 -->
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="answerTrigger" />
+			</list>
+		</property>
+		<!-- <property name="autoStartup" value="true"></property> -->
+	</bean>
+	
+	<!-- trigger配置 -->
+	<bean id="answerTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">  
+	    <property name="jobDetail" ref="answerDetail" />  
+		<property name="cronExpression" value="0/10 * * * * ?" />
+	</bean>  
+	<!-- jobDetail配置 -->
+	<bean id="answerDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">  
+		<!-- <property name="concurrent" value="false" />  -->
+		<property name="targetObject"  ref="answerTimeTaskJob" /> 
+		<property name="targetMethod" value="execute" /> 
+	</bean> 
+	<!-- 业务类的配置 -->
+	<!-- <bean id="answerJob" class="education.quartz.AnswerTimeTaskJob"></bean> -->	
+</beans>

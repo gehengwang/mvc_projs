@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security" xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans  http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+	
+<!-- <http auto-config="true">
+<custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" />
+<custom-filter position="FORM_LOGIN_FILTER" ref="myAuthFilter" />
+
+<session-management session-authentication-strategy-ref="sas"/>
+<intercept-url pattern="/*" access="ROLE_USER"/>
+</http>
+
+<beans:bean id="concurrencyFilter"
+class="org.springframework.security.web.session.ConcurrentSessionFilter">
+<beans:property name="sessionRegistry" ref="sessionRegistry" />
+<beans:property name="expiredUrl" value="/session-expired.htm" />
+</beans:bean>
+
+<beans:bean id="myAuthFilter" class=
+"org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter">
+<beans:property name="sessionAuthenticationStrategy" ref="sas" />
+<beans:property name="authenticationManager" ref="authenticationManager" />
+<user-service>
+				<user name="admin" password="123456" authorities="ROLE_USER" />
+			</user-service>
+</beans:bean>
+
+<beans:bean id="sas" class="org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy">
+<beans:constructor-arg>
+	<beans:list>
+	<beans:bean class="org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy">
+		<beans:constructor-arg ref="sessionRegistry"/>
+		<beans:property name="maximumSessions" value="1" />
+		<beans:property name="exceptionIfMaximumExceeded" value="true" />
+	</beans:bean>
+	<beans:bean class="org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy">
+	</beans:bean>
+	<beans:bean class="org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy">
+		<beans:constructor-arg ref="sessionRegistry"/>
+	</beans:bean>
+	</beans:list>
+</beans:constructor-arg>
+</beans:bean>
+
+<beans:bean id="sessionRegistry"
+	class="org.springframework.security.core.session.SessionRegistryImpl" /> -->
+	
+	<!-- <authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="admin" password="123456" authorities="ROLE_USER" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager> -->
+	
+	
+	<http auto-config="true" security="none">
+  <!-- <intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
+  <session-management>
+  	<concurrency-control session-registry-alias="sessionRegistry" expired-url="/login/index.do"></concurrency-control>
+  </session-management>
+   --></http>
+  <beans:bean id="sessionRegistry"
+	class="org.springframework.security.core.session.SessionRegistryImpl" />
+<!--   <authentication-manager>
+ 
+  <authentication-provider>
+  <user-service>
+    <user name="谢阳" password="123456" authorities="ROLE_USER, ROLE_ADMIN" />
+  </user-service>
+  </authentication-provider>
+  </authentication-manager> -->
+</beans:beans>
